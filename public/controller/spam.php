@@ -35,7 +35,7 @@ function spam($index)
         'Content-Type: application/json',
         'Origin: https://binhdanhocvuso.quangngai.gov.vn',
         'Referer: https://binhdanhocvuso.quangngai.gov.vn/register',
-        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
+        'User-Agent: Mozilla/5.0',
         'X-App-Source: BinhDanHocVuSo',
         'Content-Length: ' . strlen($payload)
     ]);
