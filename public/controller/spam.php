@@ -53,8 +53,6 @@ function spam($index)
     curl_close($ch);
 }
 
-for ($i=1; $i <= 5; $i++) { 
-    spam($i);
-}
+spam($i);
 
 ?>
