@@ -18,7 +18,7 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.5">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/header.css?v=1.2">
-    <link rel="stylesheet" href="<?= URL_P_V ?>css/footer.css?v=1.2">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/footer.css?v=1.3">
 </head>
 
 <?= toast_show() ?>

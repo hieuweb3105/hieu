@@ -1,9 +1,9 @@
 <div class="container px-lg-0 mt-5">
     
-<div class="h2 text-center text-danger text-uppercase mt-3">
+<div class="h2 text-center text-danger text-uppercase my-5 py-3">
     Khu vực kiểm thử
 </div>
-<div class="border border-1 border-danger p-5 ">
+<div class="border border-1 border-danger p-5">
     <div class="fst-italic d-flex flex-column gap-2 text-light-80">
         <div class="">
             <span class="text-light-60">Địa chỉ IP :</span>
