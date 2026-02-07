@@ -1,6 +1,7 @@
 
 .footer-led {
     position: absolute;
+    bottom: 0;
     margin-left: -10rem;
     margin-top: 50px;
     padding-top: 10px;
