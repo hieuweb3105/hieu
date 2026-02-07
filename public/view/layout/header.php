@@ -16,7 +16,7 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- CSS Custom -->
-    <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.4">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.5">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/header.css?v=1.2">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/footer.css?v=1.1">
 </head>

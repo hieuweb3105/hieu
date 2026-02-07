@@ -4,6 +4,7 @@ body {
     --bs-light-80 : #fefefedc;
     --bs-light-60 : #fefefea5;
     --bs-light-50 : #fefefe7b;
+    --bs-light-40 : #fefefe39;
 
     --bs-light-shadow : #f3f3f3;
 
@@ -39,6 +40,7 @@ body.light {
     --bs-light-80 : #2c2c2edc;
     --bs-light-60 : #2c2c2ea5;
     --bs-light-50 : #2c2c2e7b;
+    --bs-light-40 : #2c2c2e39;
 
     --bs-light-shadow : #2c2c2e2e;
 
@@ -107,6 +109,10 @@ body.light {
 
 .text-light-50 {
     color: var(--bs-light-50) !important;
+}
+
+.text-light-40 {
+    color: var(--bs-light-40) !important;
 }
 
 .text-blue {
