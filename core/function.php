@@ -263,7 +263,7 @@ function toast_create($type,$message){
 
 /**
  * Dùng để show toast (Thường để ở header layout)
- * @return void
+ * @return void | null
  */
 function toast_show(){
     if (!empty($_SESSION['toast'])) {
