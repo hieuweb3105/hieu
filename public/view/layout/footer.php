@@ -67,7 +67,7 @@
 <div class="footer-led"></div>
 
 <div class="position-fixed end-0 bottom-0 mb-5 me-lg-4">
-        <button class="btn btn-lg g-h1" id="scrollButton"><i class="fs-1 bi bi-arrow-up-circle-fill"></i></button>
+    <button class="btn btn-lg g-h1" id="scrollButton"><i class="fs-1 bi bi-arrow-up-circle-fill"></i></button>
 </div>
 
 </body>
@@ -77,13 +77,11 @@
 <script src="<?= URL_P_V ?>js/paragraph.js"></script>
 <script src="<?= URL_P_V ?>js/light_mode.js"></script>
 <script src="<?= URL_P_V ?>js/navbar_scroll.js"></script>
-<!-- CDN JS Bootstrap 5 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<!-- CDN JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="<?= URL_P_V ?>js/bootstrap.min.js"></script>
+<script src="<?= URL_P_V ?>js/jquery.min.js"></script>
 <!-- CDN Chative -->
-<?php if(BOOL_CHATIVE): ?>
-    <script src="https://messenger.svc.chative.io/static/v1.0/channels/s3ac3bbe7-7c9a-44d6-ab70-cffe6b2a1375/messenger.js?mode=livechat" defer="defer"></script>
+<?php if (BOOL_CHATIVE): ?>
+    <script src="<?= URL_P_V ?>js/chatlive.js"></script>
 <?php endif ?>
 
 </html>

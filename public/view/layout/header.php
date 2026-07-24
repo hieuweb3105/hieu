@@ -8,14 +8,10 @@
     <meta name="keywords" content="<?= WEB_KEYWORD ?>">
     <title><?= $title ? WEB_NAME . ' | ' . $title : '' ?></title>
     <link rel="icon" href="<?= URL_A ?>image/minhhieu_logo.png" type="image/png">
-    <!-- CDN bootstrap icon -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <!-- CDN CSS Bootstrap 5 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- CSS Custom -->
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/bootstrap-icons.min.css?v=1.0.1">
+    <link rel="stylesheet" href="<?= URL_P_V ?>css/animate.min.css">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/main.css?v=1.5">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/header.css?v=1.2">
     <link rel="stylesheet" href="<?= URL_P_V ?>css/footer.css?v=1.3">
