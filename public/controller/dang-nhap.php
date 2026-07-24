@@ -26,7 +26,7 @@ if(isset($_POST['login'])) {
         // Chuyển hướng trang thanh toán (nếu có)
         if($return_checkout_page) route('thanh-toan');
         // Chuyển hướng theo role
-        if(auth('name_role') == 'admin') route(DEFAULT_ADMIN_CASE);
+        if(auth('role_name') == 'admin') route(DEFAULT_ADMIN_CASE);
         route(DEFAULT_USER_CASE);
     }
             

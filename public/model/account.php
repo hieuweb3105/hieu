@@ -33,7 +33,7 @@ function check_valid_username($input) {
  * Tạo một user mới
  * @param string $username Username
  * @param string $password Mật khẩu
- * @param int $id_role ID role
+ * @param int $role_id ID role
  * @param string $email Email
  * @param string $full_name Họ tên
  * @param int $gender Giới tính
@@ -41,10 +41,10 @@ function check_valid_username($input) {
  * @param string | null $google_avatar path avatar dành cho người đăng nhập bằng tài khoản google
  * @return void
  */
-function create_user($username,$password,$id_role,$email,$full_name,$gender,$google_id = '',$google_avatar = '') {
+function create_user($username,$password,$role_id,$email,$full_name,$gender,$google_id = '',$google_avatar = '') {
     pdo_execute(
-        'INSERT INTO account (account_username,account_password,id_role,account_email,account_full_name,account_gender,account_google_id,account_google_avatar) VALUES (?,?,?,?,?,?,?,?)'
-        ,$username,md5($password),$id_role,$email,$full_name,$gender,$google_id,$google_avatar
+        'INSERT INTO account (account_username,account_password,role_id,account_email,account_full_name,account_gender,account_google_id,account_google_avatar) VALUES (?,?,?,?,?,?,?,?)'
+        ,$username,md5($password),$role_id,$email,$full_name,$gender,$google_id,$google_avatar
     );
 }
 
@@ -57,10 +57,10 @@ function create_user($username,$password,$id_role,$email,$full_name,$gender,$goo
  */
 function get_one_user_by_username($username) {
     return pdo_query_one(
-        'SELECT a.*, r.name_role
+        'SELECT a.*, r.role_name
         FROM account a
         JOIN role r
-        ON a.id_role = r.id_role
+        ON a.role_id = r.role_id
         WHERE a.deleted_at IS NULL
         AND a.account_username = ?'
         ,$username
@@ -76,10 +76,10 @@ function get_one_user_by_username($username) {
  */
 function get_one_user_by_google_id($google_id) {
     return pdo_query_one(
-        'SELECT a.*, r.name_role
+        'SELECT a.*, r.role_name
         FROM account a
         JOIN role r
-        ON a.id_role = r.id_role
+        ON a.role_id = r.role_id
         WHERE a.deleted_at IS NULL
         AND a.account_google_id = ?'
         ,$google_id
