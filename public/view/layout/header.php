@@ -32,7 +32,7 @@
             <div id="group-btn-header" class="d-flex align-items-center justify-content-center gap-1">
                 <?php if(is_login()) : ?>
                 <a href="/profile" class="btn btn-sm btn-outline-light rounded-pill p-1 pe-2 d-flex align-items-center gap-1 <?= $page == 'profile' ? 'active' : '' ?>">
-                    <img width="22" class="rounded-circle bg-light bg-opacity-75" src="<?= auth('account_avatar') ? URL_A.auth('account_avatar') : auth('account_google_avatar') ?? DEFAULT_AVATAR_MALE ?>" alt="avatar user">
+                    <img width="22" class="rounded-circle bg-light bg-opacity-75" src="<?= auth('account_avatar') ? URL_A . auth('account_avatar') : (auth('account_google_avatar') ? auth('account_google_avatar') : (auth('account_gender') == 'nam' ? DEFAULT_AVATAR_MALE : DEFAULT_AVATAR_FEMALE)) ?>" alt="avatar user">
                     <small><?= auth('account_full_name') ?></small>
                 </a>
                 <?php else : ?>
@@ -67,6 +67,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= ($page == 'collect') ? 'on' : '' ?>" href="/suu-tam">Sưu tầm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($page == 'cronjob') ? 'on' : '' ?>" href="/suu-tam">Croj</a>
                     </li>
                 </ul>
             </div>

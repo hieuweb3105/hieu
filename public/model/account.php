@@ -8,7 +8,7 @@
  */
 function check_one_exist_in_user_with_field($field,$value) {
     $result = pdo_query_value(
-        'SELECT account_id FROM account WHERE '.$field.' = ? AND deleted_at IS NULL'
+        'SELECT account_id FROM account WHERE '.$field.' = ? AND delete_at IS NULL'
         ,$value
     );
     if($result) return 1;
@@ -61,7 +61,7 @@ function get_one_user_by_username($username) {
         FROM account a
         JOIN role r
         ON a.role_id = r.role_id
-        WHERE a.deleted_at IS NULL
+        WHERE a.delete_at IS NULL
         AND a.account_username = ?'
         ,$username
     );
@@ -80,7 +80,7 @@ function get_one_user_by_google_id($google_id) {
         FROM account a
         JOIN role r
         ON a.role_id = r.role_id
-        WHERE a.deleted_at IS NULL
+        WHERE a.delete_at IS NULL
         AND a.account_google_id = ?'
         ,$google_id
     );

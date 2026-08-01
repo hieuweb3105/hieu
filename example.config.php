@@ -18,7 +18,8 @@ const URL_P_V   = URL . 'public/view/';
 const DEFAULT_ADMIN_CASE = 'thong-ke';
 const DEFAULT_USER_CASE = 'trang-chu';
 const DEFAULT_IMAGE = URL_A . '';
-const DEFAULT_AVATAR = URL_A . '';
+const DEFAULT_AVATAR_MALE = URL_A . 'image/avatar_male.png';
+const DEFAULT_AVATAR_FEMALE = URL_A . 'image/avatar_female.png';
 
 // ---[  WEBTEXT  ] --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- [ ]
 
