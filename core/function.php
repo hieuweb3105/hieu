@@ -551,7 +551,7 @@ function auto_login(){
                 FROM account a
                 JOIN role r
                 ON a.role_id = r.role_id
-                WHERE a.deleted_at IS NULL
+                WHERE a.delete_at IS NULL
                 AND a.account_token_remember = ?',
                 $token_remember
             );

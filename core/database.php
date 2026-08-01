@@ -116,7 +116,7 @@ function pdo_query_value($sql)
  */
 function delete_one($table_name,$id_record) {
     pdo_execute(
-        'UPDATE '.$table_name.' SET deleted_at = current_timestamp WHERE id_'.$table_name.' = ?',
+        'UPDATE '.$table_name.' SET delete_at = current_timestamp WHERE id_'.$table_name.' = ?',
         $id_record
     );
 }
@@ -130,7 +130,7 @@ function delete_one($table_name,$id_record) {
  */
 function restore_one($table_name,$id_record) {
     pdo_execute(
-        'UPDATE '.$table_name.' SET deleted_at = NULL WHERE id_'.$table_name.' = ?',
+        'UPDATE '.$table_name.' SET delete_at = NULL WHERE id_'.$table_name.' = ?',
         $id_record
     );
 }
@@ -148,7 +148,7 @@ function restore_one($table_name,$id_record) {
 function check_exist_one_by_id($table_name,$record_id,$in_trash = false) {
     // in trash
     $in_trash_query = '';
-    if($in_trash) $in_trash_query = 'AND deleted_at';
+    if($in_trash) $in_trash_query = 'AND delete_at';
     
     // query
     if(pdo_query_value(
@@ -177,7 +177,7 @@ function check_exist_one_by_custom($table_name,$record_name,$record_value,$in_tr
 
     // in trash
     $in_trash_query = '';
-    if($in_trash) $in_trash_query = 'AND deleted_at';
+    if($in_trash) $in_trash_query = 'AND delete_at';
     
     // query
     return pdo_query_value(
