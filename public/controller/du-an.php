@@ -1,3 +1,14 @@
 <?php
 
-view('public','project','Dự án',null);
+# [MODEL]
+model('public','project');
+
+# [HANDLE]
+
+# [DATA]
+$data = [
+    'list_project' => project_get_list(),
+];
+
+# [RENDER]
+view('public','project','Dự án',$data);
